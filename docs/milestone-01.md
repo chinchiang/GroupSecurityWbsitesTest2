@@ -1,6 +1,6 @@
 # Milestone 01 — Secure full-site navigation shell
 
-Status: implemented locally, not committed, pushed, deployed, or connected to enterprise systems.
+Status: committed to the private repository `main` branch; not deployed or connected to enterprise systems.
 
 ## Goal
 
