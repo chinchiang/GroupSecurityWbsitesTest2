@@ -1,0 +1,8 @@
+# Replace the placeholder with a verified GitHub team or user before enabling required review.
+* @chinchiang
+
+# Security-boundary and automation changes require explicit security review.
+/docs/trust-boundaries.md @chinchiang
+/docs/authorization-model.md @chinchiang
+/src/security/ @chinchiang
+/.github/workflows/ @chinchiang

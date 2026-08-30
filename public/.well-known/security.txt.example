@@ -1,0 +1,8 @@
+Contact: https://SECURITY-CONTACT-PLACEHOLDER.invalid/report
+Expires: 2099-12-31T23:59:59Z
+Preferred-Languages: zh-TW, en
+Canonical: https://PUBLIC-PSIRT-DOMAIN.invalid/.well-known/security.txt
+Policy: https://PUBLIC-PSIRT-DOMAIN.invalid/security-policy
+
+# EXAMPLE ONLY. Replace placeholders through approved PSIRT and Legal review.
+# Do not publish this example file as an operational security.txt.
