@@ -13,7 +13,7 @@ Secure demonstration shell for a multinational ODM/OEM group security portal. Mi
 - Hash routing and relative assets for a future GitHub Pages project-site demo.
 - Production Reference contracts for server-verified authorization and system adapters.
 - Direct `/admin/*` access is denied; persona selection never grants access.
-- No backend, login, upload, attachment, persistence, external connector, or deployment.
+- No backend, login, upload, attachment, persistence, or external connector.
 
 See [Milestone 01](docs/milestone-01.md) and the [requirements traceability matrix](docs/requirements-traceability.md) for acceptance evidence.
 
@@ -38,6 +38,7 @@ npm run build
 ```
 
 `npm run check` runs the complete local gate. The production build intentionally disables source maps.
+It also audits the exact `dist` tree using a file-type allowlist and content checks for credential patterns, internal locations, non-reserved email domains, test attachments, and the persistent `DEMO_STATIC` disclosure.
 
 ## Deployment profiles
 
@@ -46,7 +47,7 @@ npm run build
 | `DEMO_STATIC` | Runnable | Synthetic data, browser-memory interactions, no secrets, no authentication claims. Suitable for an approved static demo only. |
 | `PRODUCTION_REFERENCE` | Architecture/contracts only | Requires separately deployable origins, enterprise hosting, OIDC/BFF, server enforcement, region-aware data planes, audit, and real adapters before production use. |
 
-GitHub Pages deployment is intentionally **not enabled** in Milestone 01. A later approval gate must add or enable a Pages workflow only after artifact scanning confirms there are no secrets, source maps, internal URLs, or real data.
+The approved GitHub Pages workflow publishes only after a push to `main`. Its build job has read-only repository access, audits the exact `dist` tree before upload, and passes the reviewed artifact to a separate deploy job that alone receives `pages: write` and `id-token: write`. Repository Pages settings, merge approval, and the first deployment remain owner-controlled gates.
 
 ## Trust boundaries
 
