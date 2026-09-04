@@ -30,10 +30,3 @@ jobs:
         run: npm ci --ignore-scripts
       - name: Validate source and build
         run: npm run check
-      - name: Reject unsafe demo artifacts
-        shell: bash
-        run: |
-          if find dist -type f \( -name '*.map' -o -name '.env*' \) | grep -q .; then
-            echo 'Unsafe build artifact detected'
-            exit 1
-          fi

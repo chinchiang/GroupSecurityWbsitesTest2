@@ -20,9 +20,10 @@ Deliver a reviewable `DEMO_STATIC` portal shell that proves the information arch
 - [x] Production adapter and authorization interfaces exist without external calls.
 - [x] Hash routing and relative assets preserve future GitHub Pages project-site compatibility.
 - [x] CI uses read-only default permissions and verified full-SHA official actions.
+- [x] The proposed Pages workflow separates build and deploy permissions and scans the exact `dist` tree before upload.
 - [x] Automated accessibility smoke test reports no serious/critical violations on Home (color contrast remains manual).
 - [ ] Manual WCAG 2.2 AA keyboard/screen-reader/zoom review (requires human QA).
-- [ ] GitHub Pages artifact and deployment review (requires owner approval before enabling).
+- [ ] GitHub Pages artifact and deployment review (requires PR merge, repository configuration, and first successful deployment).
 
 ## Explicitly deferred
 

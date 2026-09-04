@@ -3,10 +3,11 @@
 ## Static demo release gate
 
 1. Run `npm ci --ignore-scripts` in a clean environment and `npm run check`.
-2. Inspect `dist` for source maps, `.env`, credentials, tokens, internal URLs/hostnames/IPs, real email/ticket/product names, attachments, and unexpected large files.
-3. Confirm the demo banner, persona simulation label, no-access state, and `security.txt.example` placeholders.
-4. Obtain content owner and security owner approval.
-5. Publish only the immutable reviewed artifact. Record commit and artifact digest.
+2. Confirm `npm run audit:artifact` passes against the exact `dist` tree. The automated gate rejects unexpected file types, source maps, `.env`, credential-shaped content, private/internal locations, non-reserved email domains, test attachments, and files larger than 5 MiB.
+3. Manually inspect synthetic ticket/product names and visual content; automated pattern checks cannot prove that all business data is synthetic.
+4. Confirm the demo banner, persona simulation label, no-access state, and `security.txt.example` placeholders.
+5. Obtain content owner and security owner approval.
+6. Publish only the immutable reviewed artifact. Record commit and artifact digest.
 
 ## Connector/source failure (future production)
 
